@@ -36,7 +36,7 @@ ZSH_THEME="jdabbs" # Favorites: agnoster, clean, fino, gozilla, terminalparty
 #
 # Consider: brew, cabal, capistrano, coffee, gem, node, npm, pow, rake,
 #  rails, ruby, postgres, sublime
-plugins=(extract git heroku lein rsync bundler)
+plugins=(extract git heroku rsync)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh_aliases
