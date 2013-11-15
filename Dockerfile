@@ -13,6 +13,7 @@ RUN apt-get update
 RUN apt-get upgrade -y
 
 RUN apt-get install -y ack-grep
+RUN apt-get install -y build-essential
 RUN apt-get install -y curl
 RUN apt-get install -y git
 RUN apt-get install -y man
