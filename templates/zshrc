@@ -39,7 +39,7 @@ ZSH_THEME="jdabbs" # Favorites: agnoster, clean, fino, gozilla, terminalparty
 plugins=(extract git heroku lein rsync bundler)
 
 source $ZSH/oh-my-zsh.sh
-source $ZSH/.zsh_aliases
+source $HOME/.zsh_aliases
 source $HOME/.zshrc.local
 
 export PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shims:/usr/local/bin:/usr/local/sbin:$PATH
