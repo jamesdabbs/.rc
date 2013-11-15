@@ -6,4 +6,5 @@ git clone git@github.com:jamesdabbs/.rc.git
 
 .rc/scripts/oh-my-zsh.sh
 .rc/scripts/rbenv.sh
+.rc/scripts/link-templates.sh
 

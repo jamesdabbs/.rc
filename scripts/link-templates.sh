@@ -8,6 +8,8 @@ ln -s ~/.rc/templates/tmux.conf ~/tmux.conf
 ln -s ~/.rc/templates/vimrc ~/.vimrc
 ln -s ~/.rc/templates/zsh_aliases ~/.zsh_aliases
 
+ln -s ~/.rc/templates/jdabbs.zsh-theme ~/.oh-my-zsh/themes/jdabbs.zsh-theme
+
 rm ~/.zshrc
 ln -s ~/.rc/templates/zshrc ~/.zshrc
 touch ~/.zshrc.local
