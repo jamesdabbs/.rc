@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/james/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [user]
 	name = James Dabbs
 	email = jamesdabbs@gmail.com
