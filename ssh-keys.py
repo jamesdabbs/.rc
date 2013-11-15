@@ -5,15 +5,17 @@
 
 import json
 from getpass import getpass
+from os.path import expanduser
 from subprocess import call, check_output
 
 location = raw_input("Input a name for this box > ")
 label    = "james@%s" % location
 
+ssh_file = expanduser("~/.ssh/id_rsa")
 
 print "\n== GENERATING AN SSH KEY =="
-call(["ssh-keygen", "-t", "rsa", "-f", ".ssh/id_rsa", "-N", "", "-C", "james@%s" % location])
-key = open(".ssh/id_rsa.pub").read()
+call(["ssh-keygen", "-t", "rsa", "-f", ssh_file, "-N", "", "-C", "james@%s" % location])
+key = open("%s.pub" % ssh_file).read()
 
 
 print "\n== UPDATING KEYS IN GITHUB =="
@@ -41,7 +43,7 @@ for k in keys:
   else:
     authorized_keys.append("%s %s" % (k["key"], k["title"]))
 
-with open(".ssh/authorized_keys", "w") as f:
+with open(expanduser("~/.ssh/authorized_keys"), "w") as f:
   f.write("\n".join(authorized_keys))
 
 # Upload the new key
