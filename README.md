@@ -23,3 +23,6 @@ From your home directory on a fresh install (with the dependencies specified in 
 
 This will configure ssh keys, clone this repo, and begin the setup process.
 
+### TODO
+
+Setup `sshd` and port redirection
