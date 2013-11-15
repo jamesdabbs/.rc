@@ -19,8 +19,8 @@ key = open("%s.pub" % ssh_file).read()
 
 
 print "\n== UPDATING KEYS IN GITHUB =="
-username = raw_input("Username (enter for 'jamesdabbs') > ") or "jamesdabbs"
-password = getpass("Password > ")
+username = "jamesdabbs" # raw_input("Username (enter for 'jamesdabbs') > ") or "jamesdabbs"
+password = getpass("Password for `%s` > " % username)
 
 # Get the existing Github keys
 keys = json.loads(check_output([
@@ -58,8 +58,8 @@ call([
 
 
 print "\n== UPLOADING KEY TO BITBUCKET =="
-username = raw_input("Username (enter for 'jamesdabbs') > ") or "jamesdabbs"
-password = getpass("Password > ")
+# username = raw_input("Username (enter for 'jamesdabbs') > ") or "jamesdabbs"
+password = getpass("Password for `%s`> " % username) or password
 
 keys = json.loads(check_output([
   "curl",
