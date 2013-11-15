@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+echo "\n == INSTALLING PACKAGES =="
+~/.rc/scripts/packages.sh
+
 echo "\n== OH MY ZSH =="
 ~/.rc/scripts/oh-my-zsh.sh
 
