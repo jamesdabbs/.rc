@@ -41,5 +41,5 @@ plugins=(extract git heroku lein rsync bundler)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshrc.local
 
-export PATH=$HOME/.rbenv/shims:$PATH
+export PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH
 
