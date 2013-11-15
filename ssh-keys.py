@@ -73,7 +73,7 @@ for k in keys:
       "curl",
       "-u", "%s:%s" % (username, password),
       "-X", "DELETE",
-      "https://bitbucket.org/api/1.0/users/%s/ssh-keys/%s" % (username, k["id"])
+      "https://bitbucket.org/api/1.0/users/%s/ssh-keys/%s" % (username, k["pk"])
     ])
 
 call([
