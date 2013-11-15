@@ -4,7 +4,8 @@ curl https://raw.github.com/jamesdabbs/.rc/master/ssh-keys.py -o ssh-key.py
 mkdir -p $HOME/.ssh
 python ssh-key.py
 
-sudo apt-get install git zsh
+echo ""
+sudo apt-get install -y git zsh
 
 echo ""
 echo ""
