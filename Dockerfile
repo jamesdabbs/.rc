@@ -18,6 +18,7 @@ RUN apt-get install -y git
 RUN apt-get install -y man
 RUN apt-get install -y sudo
 RUN apt-get install -y tree
+RUN apt-get install -y tmux
 RUN apt-get install -y vim
 RUN apt-get install -y zsh
 
