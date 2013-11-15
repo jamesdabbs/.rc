@@ -13,6 +13,7 @@
 --ignore-dir=doc
 --ignore-dir=coverage
 --ignore-dir=public/assets
+--ignore-dir=.bundle
 --ignore-dir=node_modules
 --ignore-dir=cabal-dev
 --smart-case
