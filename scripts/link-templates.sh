@@ -10,6 +10,9 @@ ln -s ~/.rc/templates/zsh_aliases ~/.zsh_aliases
 
 ln -s ~/.rc/templates/jdabbs.zsh-theme ~/.oh-my-zsh/themes/jdabbs.zsh-theme
 
+mkdir -p ~/.vim/colors
+ln -s ~/.rc/templates/tir_black.vim ~/.vim/colors/tir_black.vim
+
 rm ~/.zshrc
 ln -s ~/.rc/templates/zshrc ~/.zshrc
 touch ~/.zshrc.local
