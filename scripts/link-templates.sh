@@ -1,19 +1,22 @@
 #!/bin/bash
-ln -s ~/.rc/templates/ackrc ~/.ackrc
-ln -s ~/.rc/templates/gemrc ~/.gemrc
-ln -s ~/.rc/templates/gitconfig ~/.gitconfig
-ln -s ~/.rc/templates/gitignore_global ~/.gitignore_global
-ln -s ~/.rc/templates/rspec ~/.rspec
-ln -s ~/.rc/templates/tmux.conf ~/.tmux.conf
-ln -s ~/.rc/templates/vimrc ~/.vimrc
-ln -s ~/.rc/templates/zsh_aliases ~/.zsh_aliases
+ln -sf ~/.rc/templates/ackrc ~/.ackrc
+ln -sf ~/.rc/templates/gemrc ~/.gemrc
+ln -sf ~/.rc/templates/gitconfig ~/.gitconfig
+ln -sf ~/.rc/templates/gitignore_global ~/.gitignore_global
+ln -sf ~/.rc/templates/rspec ~/.rspec
+ln -sf ~/.rc/templates/tmux.conf ~/.tmux.conf
+ln -sf ~/.rc/templates/vimrc ~/.vimrc
+ln -sf ~/.rc/templates/zsh_aliases ~/.zsh_aliases
 
-ln -s ~/.rc/templates/jdabbs.zsh-theme ~/.oh-my-zsh/themes/jdabbs.zsh-theme
+ln -sf ~/.rc/templates/jdabbs.zsh-theme ~/.oh-my-zsh/themes/jdabbs.zsh-theme
+
+mkdir -p ~/.bundle
+ln -sf ~/.rc/templates/bundle.config ~/.bundle/config
 
 mkdir -p ~/.vim/colors
-ln -s ~/.rc/templates/tir_black.vim ~/.vim/colors/tir_black.vim
+ln -sf ~/.rc/templates/tir_black.vim ~/.vim/colors/tir_black.vim
 
 rm -f ~/.zshrc
-ln -s ~/.rc/templates/zshrc ~/.zshrc
+ln -sf ~/.rc/templates/zshrc ~/.zshrc
 touch ~/.zshrc.local
 
