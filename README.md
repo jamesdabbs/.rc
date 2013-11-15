@@ -16,7 +16,7 @@ From there, feel free to bootstrap / customize as desired and then commit the ch
 
 ## Bootstrapping
 
-From your home directory on a fresh install (with python), run
+From your home directory on a fresh install (with the dependencies specified in the Dockerfile), run
 
     curl https://raw.github.com/jamesdabbs/.rc/master/bootstrap.sh -o bootstrap.sh
     bash ./bootstrap.sh
