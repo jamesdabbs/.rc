@@ -1,0 +1,39 @@
+# No-corrects
+alias bundle='nocorrect bundle'
+alias rspec='nocorrect rspec'
+alias tmux='nocorrect tmux'
+alias ack='nocorrect ack'
+alias mux='nocorrect mux'
+alias mcn='nocorrect mcn'
+
+# Config helpers
+alias vi='vim'
+alias vrc='vi $HOME/.vimrc'
+alias za='vi $HOME/.zsh_aliases; source $HOME/.zsh_aliases'
+alias zrc='vi $HOME/.zshrc; source $HOME/.zshrc'
+
+# Global aliases
+alias -g 2l=' 2>&1 | less'
+alias -g gp='| grep -i'
+
+# Env manipulation
+alias cover='export COVERAGE=true && echo "Set COVERAGE=true"'
+alias uncover='unset COVERAGE && echo "Unset COVERAGE"'
+alias o0='export OPT=0 && echo "Set OPT=0"'
+alias o3='export OPT=3 && echo "Set OPT=3"'
+
+# General helpers
+alias b='bundle exec'
+function mcd {
+  mkdir $1 && cd $1
+}
+alias ttr='touch tmp/restart.txt'
+alias valgruby='valgrind --trace-children=yes'
+function bak {
+  mv $1 $1.bak
+}
+alias mochall='mocha --recursive test'
+
+# LEARN!
+alias gl='echo "NO! You mean \`git l\`"'
+

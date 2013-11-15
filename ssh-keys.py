@@ -48,11 +48,11 @@ with open(expanduser("~/.ssh/authorized_keys"), "w") as f:
 
 # Upload the new key
 call([
-  "curl", 
-  "-u", "%s:%s" % (username, password), 
-  "-X", "POST", 
-  "-H", "Content-type: application/json", 
-  "-d", json.dumps({"title": label, "key": key}), 
+  "curl",
+  "-u", "%s:%s" % (username, password),
+  "-X", "POST",
+  "-H", "Content-type: application/json",
+  "-d", json.dumps({"title": label, "key": key}),
   "https://api.github.com/user/keys"
 ])
 
@@ -84,5 +84,4 @@ call([
   "-d", json.dumps({"label": label, "key": key}),
   "https://bitbucket.org/api/1.0/users/%s/ssh-keys" % username
 ])
-
 

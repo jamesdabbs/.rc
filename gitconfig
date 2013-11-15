@@ -1,0 +1,28 @@
+[core]
+	excludesfile = /Users/james/.gitignore_global
+[user]
+	name = James Dabbs
+	email = jamesdabbs@gmail.com
+[color]
+	ui = auto
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+[github]
+	user = jamesdabbs
+[push]
+	default = tracking
+[alias]
+  c   = commit
+  co  = checkout
+  d   = diff --word-diff
+  ds  = diff --word-diff --staged
+  dt  = difftool
+  dts = difftool --staged
+  l   = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  s   = status --short
+  wip = commit -am "WIP"
+
