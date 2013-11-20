@@ -7,6 +7,7 @@ ln -sf ~/.rc/templates/rspec ~/.rspec
 ln -sf ~/.rc/templates/tmux.conf ~/.tmux.conf
 ln -sf ~/.rc/templates/vimrc ~/.vimrc
 ln -sf ~/.rc/templates/zsh_aliases ~/.zsh_aliases
+ln -sf ~/.rc/templates/ctags ~/.ctags
 
 ln -sf ~/.rc/templates/jdabbs.zsh-theme ~/.oh-my-zsh/themes/jdabbs.zsh-theme
 
