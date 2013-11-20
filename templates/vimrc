@@ -11,6 +11,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
+Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 
