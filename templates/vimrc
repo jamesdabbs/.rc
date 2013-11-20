@@ -81,6 +81,9 @@ nnoremap <c-e> 5<c-e>
 nnoremap <c-y> 5<c-y>
 
 " Window navigation
+map <leader>J :split<cr><c-w>j
+map <leader>L :vsplit<cr><c-w>l
+
 nnoremap <leader>j <c-w>j
 nnoremap <leader>k <c-w>k
 nnoremap <leader>h <c-w>h
