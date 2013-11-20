@@ -1,8 +1,20 @@
 " This is standard pathogen and Vim setup
 set nocompatible
-call pathogen#infect()
-syntax on
+filetype off
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'mileszs/ack.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'tpope/vim-fugitive'
+
 filetype plugin indent on
+
+syntax on
 
 " Use 7.4 hybrid numbering
 set relativenumber
