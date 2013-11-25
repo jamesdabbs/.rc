@@ -6,6 +6,10 @@ alias ack='nocorrect ack'
 alias mux='nocorrect mux'
 alias mcn='nocorrect mcn'
 
+# Ignore basic commands in the history
+alias ls=' ls'
+alias cd=' cd'
+
 # Config helpers
 alias vi='vim'
 alias vrc='vi $HOME/.vimrc'
@@ -33,7 +37,4 @@ function bak {
   mv $1 $1.bak
 }
 alias mochall='mocha --recursive test'
-
-# LEARN!
-alias gl='echo "NO! You mean \`git l\`"'
 
