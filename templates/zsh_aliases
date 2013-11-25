@@ -7,7 +7,7 @@ alias mux='nocorrect mux'
 alias mcn='nocorrect mcn'
 
 # Ignore basic commands in the history
-alias ls=' ls'
+alias ls=' ls -FG'
 alias cd=' cd'
 
 # Config helpers
