@@ -11,10 +11,14 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
+Bundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on
 
 syntax on
+
+" Highlight hamlc as haml
+au BufRead,BufNewFile *.hamlc set ft=haml
 
 " Use 7.4 hybrid numbering
 set relativenumber
