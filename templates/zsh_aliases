@@ -10,6 +10,7 @@ alias mcn='nocorrect mcn'
 alias ls=' ls -FG --color'
 alias l=' ls -laFG --color'
 alias cd=' cd'
+alias ts=' tmux list-sessions'
 
 # Config helpers
 alias vi='vim'
