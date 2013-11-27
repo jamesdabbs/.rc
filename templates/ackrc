@@ -16,4 +16,5 @@
 --ignore-dir=.bundle
 --ignore-dir=node_modules
 --ignore-dir=cabal-dev
+--ignore-dir=dist
 --smart-case
