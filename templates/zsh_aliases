@@ -7,8 +7,8 @@ alias mux='nocorrect mux'
 alias mcn='nocorrect mcn'
 
 # Ignore basic commands in the history
-alias ls=' ls -FG --color'
-alias l=' ls -laFG --color'
+alias ls=' ls -FG'
+alias l=' ls -laFG'
 alias cd=' cd'
 
 # Tmux helpers
