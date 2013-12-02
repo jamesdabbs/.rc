@@ -10,7 +10,11 @@ alias mcn='nocorrect mcn'
 alias ls=' ls -FG --color'
 alias l=' ls -laFG --color'
 alias cd=' cd'
+
+# Tmux helpers
 alias ts=' tmux list-sessions'
+alias ta='tmux attach-session'
+alias td='tmux detach'
 
 # Config helpers
 alias vi='vim'
