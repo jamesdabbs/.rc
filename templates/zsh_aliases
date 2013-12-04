@@ -13,7 +13,6 @@ alias cd=' cd'
 
 # Tmux helpers
 alias ts=' tmux list-sessions'
-alias ta='tmux attach-session'
 alias td='tmux detach'
 
 # Config helpers
