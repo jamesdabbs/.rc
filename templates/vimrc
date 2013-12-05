@@ -12,6 +12,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'junegunn/vim-easy-align'
 
 filetype plugin indent on
 
@@ -109,4 +110,6 @@ function! SpecFiles()
 endfunction
 nnoremap <leader>s :call SpecFile()<CR>
 nnoremap <leader>S :call SpecFiles()<CR>
+
+let @f='/describeN:s/ do/, :focus do:noh'
 
