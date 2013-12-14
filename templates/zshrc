@@ -51,6 +51,6 @@ setopt hist_ignore_space
 export HISTSIZE=50000
 
 export EDITOR=vim
-export OPT=0
+export OPT=3
 export WARN_ERRORS=-Werror
 
