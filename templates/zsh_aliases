@@ -33,6 +33,8 @@ alias o3='export OPT=3 && echo "Set OPT=3"'
 
 # General helpers
 alias b='bundle exec'
+alias r='rake'
+alias rr='rake clean && rake'
 function mcd {
   mkdir $1 && cd $1
 }
