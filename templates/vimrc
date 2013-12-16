@@ -13,7 +13,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'junegunn/vim-easy-align'
-Bundle 'goldfeld/vim-seek'
+Bundle 'goldfeld/vim-easymotion'
 
 filetype plugin indent on
 
@@ -74,12 +74,14 @@ let g:gitgutter_sign_column_always = 1
 
 " Tweaks
 let mapleader=" "
-nnoremap <leader><leader> <c-^>
 
+map <leader><leader> <c-^>
 map <leader>r :so $MYVIMRC<cr>
 map <leader>b :NERDTreeToggle<cr>
 map <leader>p :CtrlPTag<cr>
 map <leader>v :ccl<cr>
+
+let g:EasyMotion_leader_key=","
 
 " Slightly faster paging
 nnoremap <c-e> 5<c-e>
