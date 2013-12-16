@@ -73,10 +73,10 @@ highlight clear SignColumn
 let g:gitgutter_sign_column_always = 1
 
 " Tweaks
-let mapleader=","
+let mapleader=" "
 nnoremap <leader><leader> <c-^>
 
-map <leader>R :so $MYVIMRC<cr>
+map <leader>r :so $MYVIMRC<cr>
 map <leader>b :NERDTreeToggle<cr>
 map <leader>p :CtrlPTag<cr>
 map <leader>v :ccl<cr>
@@ -104,10 +104,10 @@ map <leader>q :Eval (stop)<cr>
 
 " Spec helpers
 function! SpecFile()
-  !spring rspec %
+  !bundle exec rspec %
 endfunction
 function! SpecFiles()
-  !spring rspec
+  !bundle exec rspec
 endfunction
 nnoremap <leader>s :call SpecFile()<CR>
 nnoremap <leader>S :call SpecFiles()<CR>
