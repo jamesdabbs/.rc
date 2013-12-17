@@ -13,7 +13,6 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'junegunn/vim-easy-align'
-Bundle 'goldfeld/vim-easymotion'
 
 filetype plugin indent on
 
@@ -73,7 +72,7 @@ highlight clear SignColumn
 let g:gitgutter_sign_column_always = 1
 
 " Tweaks
-let mapleader=" "
+let mapleader=","
 
 map <leader><leader> <c-^>
 map <leader>r :so $MYVIMRC<cr>
@@ -81,24 +80,22 @@ map <leader>b :NERDTreeToggle<cr>
 map <leader>p :CtrlPTag<cr>
 map <leader>v :ccl<cr>
 
-let g:EasyMotion_leader_key=","
-
 " Slightly faster paging
 nnoremap <c-e> 5<c-e>
 nnoremap <c-y> 5<c-y>
 
 " Window navigation
-map <leader>J :split<cr><c-w>j
-map <leader>L :vsplit<cr><c-w>l
+map <Tab>J :split<cr><c-w>j
+map <Tab>L :vsplit<cr><c-w>l
 
-nnoremap <leader>j <c-w>j
-nnoremap <leader>k <c-w>k
-nnoremap <leader>h <c-w>h
-nnoremap <leader>l <c-w>l
-inoremap <leader>j <esc><c-w>j
-inoremap <leader>k <esc><c-w>k
-inoremap <leader>h <esc><c-w>h
-inoremap <leader>l <esc><c-w>l
+nnoremap <Tab>j <c-w>j
+nnoremap <Tab>k <c-w>k
+nnoremap <Tab>h <c-w>h
+nnoremap <Tab>l <c-w>l
+inoremap <Tab>j <esc><c-w>j
+inoremap <Tab>k <esc><c-w>k
+inoremap <Tab>h <esc><c-w>h
+inoremap <Tab>l <esc><c-w>l
 
 " Overtone helpers
 map <leader>x :Eval<cr>
