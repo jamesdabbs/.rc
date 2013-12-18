@@ -97,6 +97,10 @@ inoremap <Tab>k <esc><c-w>k
 inoremap <Tab>h <esc><c-w>h
 inoremap <Tab>l <esc><c-w>l
 
+" Indent
+vnoremap < <gv
+vnoremap > >gv
+
 " Overtone helpers
 map <leader>x :Eval<cr>
 map <leader>q :Eval (stop)<cr>
