@@ -1,17 +1,17 @@
 # Left prompt, largely ported from .bash_prompt
-local name="%{$fg_bold[blue]%}%n%{$reset_color%}"
-local host="%{$fg[green]%}%m%{$reset_color%}"
-local current_dir="%{$fg[yellow]%}%~%{$reset_color%}"
+local current_dir="%{$fg_bold[blue]%}%~%{$reset_color%}"
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 if [[ -z "$SSH_CLIENT" ]]; then
   ident=""
 else
-  ident="${name} %{$FG[239]%}at%{$reset_color%} ${host} %{$FG[239]%}in%{$reset_color%} "
+  local name="%{$fg[yellow]%}%n%{$reset_color%}"
+  local host="%{$fg[yellow]%}%m%{$reset_color%}"
+  ident="${name}%{$FG[239]%}@${host} %{$FG[239]%}in%{$reset_color%} "
 fi
 
-PROMPT="${ident}${current_dir} %(?..%{$fg[red]%})%B⊩%b%{$reset_color%} "
+PROMPT="${ident}${current_dir} %{$fg[green]%}%(?..%{$fg[red]%})⊩%{$reset_color%} "
 
 
 # Right prompt w/ Git info - borrowed heavily from `gozilla` theme
