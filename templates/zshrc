@@ -50,6 +50,9 @@ export PATH=.bundle/binstubs:$PATH
 setopt hist_ignore_space
 export HISTSIZE=50000
 
+# For neo4j
+export JAVA_HOME="$(/usr/libexec/java_home)"
+
 export EDITOR=vim
 export OPT=3
 export WARN_ERRORS=-Werror
