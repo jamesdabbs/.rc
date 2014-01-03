@@ -1,10 +1,10 @@
 if [[ -z "$SSH_CLIENT" ]]; then
-  loc="%F{12}%~%f"
+  loc="%{$fg_bold[blue]%}%~%{$reset_color%}"
 else
-  loc="%F{228}%~%f"
+  loc="%{$fg_bold[yellow]%}%~%{$reset_color%}"
 fi
 
-PROMPT="${loc} %{$fg[green]%}%(?..%{$fg_bold[red]%})⊩%{$reset_color%} "
+PROMPT=" ${loc} %{$fg[green]%}%(?..%{$fg_bold[red]%})⊩%{$reset_color%} "
 
 
 # Right prompt w/ Git info - borrowed heavily from `gozilla` theme
