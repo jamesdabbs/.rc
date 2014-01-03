@@ -1,11 +1,3 @@
-# No-corrects
-alias bundle='nocorrect bundle'
-alias rspec='nocorrect rspec'
-alias tmux='nocorrect tmux'
-alias ack='nocorrect ack'
-alias mux='nocorrect mux'
-alias mcn='nocorrect mcn'
-
 # Ignore basic commands in the history
 alias ls=' ls -FG'
 alias l=' ls -laFG'
