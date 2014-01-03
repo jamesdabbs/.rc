@@ -83,6 +83,12 @@ map <leader>b :NERDTreeToggle<cr>
 map <leader>p :CtrlPTag<cr>
 map <leader>v :ccl<cr>
 
+" Start interactive EasyAlign in visual mode
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign with a Vim movement
+nmap <Leader>a <Plug>(EasyAlign)
+
 " Slightly faster paging
 nnoremap <c-e> 5<c-e>
 nnoremap <c-y> 5<c-y>
