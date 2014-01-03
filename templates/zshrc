@@ -52,6 +52,11 @@ export HISTSIZE=50000
 
 # For neo4j
 export JAVA_HOME="$(/usr/libexec/java_home)"
+export NEO4J_URL="http://localhost:7474"
+
+# For rabbitmq
+export RABBITMQ_URL="amqp://guest@localhost:5672"
+
 
 export EDITOR=vim
 export OPT=3
