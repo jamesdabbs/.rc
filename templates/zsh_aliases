@@ -37,4 +37,5 @@ function bak {
   mv $1 $1.bak
 }
 alias mochall='mocha --recursive test'
+alias jurl='curl -H "Content-type: application/json"'
 
