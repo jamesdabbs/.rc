@@ -1,17 +1,10 @@
-# Left prompt, largely ported from .bash_prompt
-local current_dir="%{$fg_bold[blue]%}%~%{$reset_color%}"
-
-local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
-
 if [[ -z "$SSH_CLIENT" ]]; then
-  ident=""
+  symbol="⊩"
 else
-  local name="%{$fg[yellow]%}%n%{$reset_color%}"
-  local host="%{$fg[yellow]%}%m%{$reset_color%}"
-  ident="${name}%{$FG[239]%}@${host} %{$FG[239]%}in%{$reset_color%} "
+  symbol="⊨"
 fi
 
-PROMPT="${ident}${current_dir} %{$fg[green]%}%(?..%{$fg[red]%})⊩%{$reset_color%} "
+PROMPT="%{$fg_bold[blue]%}%~%{$reset_color%} %{$fg[green]%}%(?..%{$fg[red]%})${symbol}%{$reset_color%} "
 
 
 # Right prompt w/ Git info - borrowed heavily from `gozilla` theme
@@ -27,9 +20,9 @@ ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%} ⚡ "
 ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} ✗"
 ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%} ➦"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[magenta]%} ✂"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[grey]%} ✱"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[grey]%} ✱"
 
-ZSH_THEME_GIT_PROMPT_STASHED="%{$fg[red]%} ☁ "
+ZSH_THEME_GIT_PROMPT_STASHED="%{$fg_bold[red]%} ☁ "
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[yellow]%} ↑"
 ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg[yellow]%} ↓"
 ZSH_THEME_GIT_PROMPT_DIVERGED="%{$fg[yellow]%} ↕"
