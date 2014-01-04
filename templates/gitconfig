@@ -16,6 +16,7 @@
 [push]
 	default = tracking
 [alias]
+  a   = add
   c   = commit
   co  = checkout
   d   = diff --word-diff
