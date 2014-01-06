@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+# Rejects commits which check in a :focus-ed spec
+# To install: ln -s pre-commit .git/hooks/pre-commit
+
+FILES_PATTERN='_spec\.rb$'
+FORBIDDEN=':focus'
+errs = `git diff --cached --name-only | grep -E #{FILES_PATTERN} | xargs grep --with-filename -n #{FORBIDDEN}`
+
+unless errs.empty?
+  puts "Commit rejected. Please correct:"
+  puts errs
+  exit 1
+end

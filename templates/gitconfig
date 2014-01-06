@@ -26,4 +26,6 @@
   l   = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 20
   s   = status --short
   wip = commit -am "WIP"
+[init]
+  templatedir = ~/.rc/templates/git-hooks
 
