@@ -13,6 +13,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'junegunn/vim-easy-align'
+Bundle 'regedarek/ZoomWin'
 
 filetype plugin indent on
 
