@@ -9,6 +9,7 @@ Bundle 'gmarik/vundle'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kchmck/vim-coffee-script'
@@ -68,6 +69,9 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+" Save on losing focus
+au FocusLost * :wa
+
 " GitGutter
 highlight clear SignColumn
 let g:gitgutter_sign_column_always = 1
@@ -80,15 +84,18 @@ let mapleader=","
 
 map <leader><leader> <c-^>
 map <leader>r :so $MYVIMRC<cr>
+nnoremap <leader>ev <c-w><c-v><c-l>:e $MYVIMRC<cr>
+
+map <leader>a :Ack<cr>
 map <leader>b :NERDTreeToggle<cr>
-map <leader>p :CtrlPTag<cr>
 map <leader>v :ccl<cr>
+map <leader>x :noh<cr>
 
 " Start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
 
 " Start interactive EasyAlign with a Vim movement
-nmap <Leader>a <Plug>(EasyAlign)
+nmap <Leader>l <Plug>(EasyAlign)
 
 " Slightly faster paging
 nnoremap <c-e> 5<c-e>
@@ -107,13 +114,31 @@ inoremap <Tab>k <esc><c-w>k
 inoremap <Tab>h <esc><c-w>h
 inoremap <Tab>l <esc><c-w>l
 
+" Let's do this
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+inoremap jj <esc>
+
+" Move line-wise on wrapped lines
+nnoremap j gj
+nnoremap k gk
+
+" Easier command entry
+nnoremap ; :
+
 " Indent
 vnoremap < <gv
 vnoremap > >gv
 
 " Overtone helpers
-map <leader>x :Eval<cr>
-map <leader>q :Eval (stop)<cr>
+" map <leader>x :Eval<cr>
+" map <leader>q :Eval (stop)<cr>
 
 " Spec helpers
 function! SpecFile()
