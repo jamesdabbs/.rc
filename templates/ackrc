@@ -2,6 +2,7 @@
 --type-add=ruby=.rb,.rake
 --type-add=rb=.rb,.rake
 --type-add=html=.haml,.html.erb,.html.haml,.html.slim
+--type-add=hs=.hs
 --type-add=co=.coffee,.hamlc
 --type-add=coffee=.coffee,.hamlc
 --type-set=cucumber=.feature
