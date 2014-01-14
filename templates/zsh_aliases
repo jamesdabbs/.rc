@@ -38,6 +38,12 @@ function bak {
 }
 alias mochall='mocha --recursive test'
 alias jurl='curl -H "Content-type: application/json"'
+alias fix-vbox='sudo /Library/StartupItems/VirtualBox/VirtualBox restart'
+function colors-for-tmux {
+  for i in {0..255} ; do
+    printf "\x1b[38;5;${i}mcolour${i}\t"
+  done
+}
 
 alias au='sudo apt-get update -y && sudo apt-get upgrade -y'
 
