@@ -46,4 +46,5 @@ function colors-for-tmux {
 }
 
 alias au='sudo apt-get update -y && sudo apt-get upgrade -y'
+alias bu='brew update && brew upgrade'
 
