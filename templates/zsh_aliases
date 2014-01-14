@@ -39,3 +39,5 @@ function bak {
 alias mochall='mocha --recursive test'
 alias jurl='curl -H "Content-type: application/json"'
 
+alias au='sudo apt-get update -y && sudo apt-get upgrade -y'
+
