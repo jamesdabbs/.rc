@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+print "Checking for config updates ... "
 Dir.chdir File.dirname __FILE__ do
   `git fetch 2>/dev/null`
   results  = `git status --porcelain -b`.split "\n"
@@ -10,9 +11,13 @@ Dir.chdir File.dirname __FILE__ do
   changed = !results.count.zero?
 
   next unless ahead || behind || changed
-  puts "Pending configuration updates:"
-  puts status if ahead || behind
-  system "git s" if changed
-  puts
+  if ahead || behind
+    puts "\e[033;1m#{status}\e[0m"
+  elsif changed
+    puts
+    system "git s"
+  else
+    puts "None found"
+  end
 end
 
