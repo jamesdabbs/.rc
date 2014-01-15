@@ -1,8 +1,21 @@
 #!/usr/bin/env ruby
 
+CHECK_FILE = "last_check"
+MAX_FREQ   = 24 * 60 * 60
+
+age = if File.exists? CHECK_FILE
+  Time.now - File.mtime(CHECK_FILE)
+else
+  0
+end
+force = ARGV.shift
+
+exit unless age > MAX_FREQ || force
+
 print "Checking for config updates ... "
 Dir.chdir File.dirname __FILE__ do
-  `git fetch origin 2>/dev/null`
+  `touch ./last_check && git fetch origin 2>/dev/null`
+
   results  = `git status --porcelain -b`.split "\n"
   status   = results.shift =~ /\[(.*?)\]/ && $1
 
@@ -10,7 +23,7 @@ Dir.chdir File.dirname __FILE__ do
   behind  = status =~ /behind (\d+)/ && $1
   changed = !results.count.zero?
 
-  next unless ahead || behind || changed
+  exit unless ahead || behind || changed
   if ahead || behind
     puts "\e[033;1m#{status}\e[0m"
   elsif changed
