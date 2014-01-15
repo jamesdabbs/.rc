@@ -45,6 +45,10 @@ function colors-for-tmux {
   done
 }
 
+# Update helpers
 alias au='sudo apt-get update -y && sudo apt-get upgrade -y'
 alias bu='brew update && brew upgrade'
+
+# Start a music server, detached
+alias mup='tmux new-session -s music -d "cmus"'
 
