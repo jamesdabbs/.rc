@@ -3,14 +3,11 @@
 CHECK_FILE = "last_check"
 MAX_FREQ   = 24 * 60 * 60
 
-age = if File.exists? CHECK_FILE
-  Time.now - File.mtime(CHECK_FILE)
-else
-  0
+if File.exists? CHECK_FILE
+  age   = Time.now - File.mtime(CHECK_FILE)
+  force = ARGV.shift
+  exit unless force || age > MAX_FREQ
 end
-force = ARGV.shift
-
-exit unless age > MAX_FREQ || force
 
 print "Checking for config updates ... "
 Dir.chdir File.dirname __FILE__ do
