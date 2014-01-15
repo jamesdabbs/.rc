@@ -2,7 +2,7 @@
 
 print "Checking for config updates ... "
 Dir.chdir File.dirname __FILE__ do
-  `git fetch 2>/dev/null`
+  `git fetch origin 2>/dev/null`
   results  = `git status --porcelain -b`.split "\n"
   status   = results.shift =~ /\[(.*?)\]/ && $1
 
