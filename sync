@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+Dir.chdir File.dirname __FILE__ do
+  `git fetch 2>/dev/null`
+  results  = `git status --porcelain -b`.split "\n"
+  status   = results.shift =~ /\[(.*?)\]/ && $1
+
+  ahead   = status =~ /ahead (\d+)/ && $1
+  behind  = status =~ /behind (\d+)/ && $1
+  changed = !results.count.zero?
+
+  next unless ahead || behind || changed
+  puts "Pending configuration updates:"
+  puts status if ahead || behind
+  system "git s" if changed
+  puts
+end
+
