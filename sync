@@ -3,14 +3,14 @@
 CHECK_FILE = "last_check"
 MAX_FREQ   = 24 * 60 * 60
 
-if File.exists? CHECK_FILE
-  age   = Time.now - File.mtime(CHECK_FILE)
-  force = ARGV.shift
-  exit unless force || age > MAX_FREQ
-end
-
-print "Checking for config updates ... "
 Dir.chdir File.dirname __FILE__ do
+  if File.exists? CHECK_FILE
+    age   = Time.now - File.mtime(CHECK_FILE)
+    force = ARGV.shift
+    exit unless force || age > MAX_FREQ
+  end
+
+  print "Checking for config updates ... "
   `touch ./last_check && git fetch origin 2>/dev/null`
 
   results  = `git status --porcelain -b`.split "\n"
