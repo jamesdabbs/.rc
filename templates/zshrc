@@ -50,6 +50,11 @@ export PATH=.bundle/binstubs:$PATH
 setopt hist_ignore_space
 export HISTSIZE=50000
 
+# Config update check
+if [[ -x $HOME/.rc/sync ]]; then
+  $HOME/.rc/sync
+fi
+
 # For neo4j
 if [[ -x /usr/libexec/java_home ]]; then
   export JAVA_HOME="$(/usr/libexec/java_home)"
