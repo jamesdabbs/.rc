@@ -4,6 +4,7 @@ else
   loc="%{$fg_bold[yellow]%}%~%{$reset_color%}"
 fi
 
+# Other symbols I might want to use: ∴ ⊗ ⊩
 PROMPT=" ${loc} %{$fg[green]%}%(?..%{$fg_bold[red]%})⊩%{$reset_color%} "
 
 
