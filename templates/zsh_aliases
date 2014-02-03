@@ -33,7 +33,7 @@ function mcd {
 }
 alias ttr='touch tmp/restart.txt'
 alias valgruby='valgrind --trace-children=yes'
-alias glocal='git ls-files --others | grep -v node_modules'
+alias glocal='git ls-files --others | grep -v -e node_modules -e .bundle'
 function bak {
   mv $1 $1.bak
 }
