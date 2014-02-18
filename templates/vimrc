@@ -15,6 +15,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'regedarek/ZoomWin'
+Bundle 'travitch/hasksyn'
 
 filetype plugin indent on
 
