@@ -19,4 +19,5 @@
 --ignore-dir=node_modules
 --ignore-dir=cabal-dev
 --ignore-dir=dist
+--ignore-dir=.cabal-sandbox
 --smart-case
