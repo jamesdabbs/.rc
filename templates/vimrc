@@ -17,6 +17,8 @@ Bundle 'junegunn/vim-easy-align'
 Bundle 'regedarek/ZoomWin'
 Bundle 'travitch/hasksyn'
 
+Bundle 'altercation/vim-colors-solarized'
+
 filetype plugin indent on
 
 syntax on
@@ -55,6 +57,8 @@ set wildignore+=*/cabal-dev/*,*/node_modules/*,*.so,*.o,*.hi
 set t_Co=256
 try
   colorscheme tir_black
+  " set background=light
+  " colorscheme solarized
 catch
   colorscheme pablo
 endtry
