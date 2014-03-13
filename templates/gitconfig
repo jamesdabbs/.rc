@@ -17,6 +17,7 @@
 	default = tracking
 [alias]
   a   = add
+  b   = branch
   c   = commit
   co  = checkout
   d   = diff --word-diff
