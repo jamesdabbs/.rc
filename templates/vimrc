@@ -6,18 +6,27 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
+
+" File exploration
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
+
+" Git integration
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'regedarek/ZoomWin'
+
+" Coloring and syntax highlighting
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'travitch/hasksyn'
 
-Bundle 'altercation/vim-colors-solarized'
+" Text manipulation
+Bundle 'junegunn/vim-easy-align'
+Bundle 'scrooloose/nerdcommenter'
+
+" Spec runners - see http://robots.thoughtbot.com/running-specs-from-vim-sent-to-tmux-via-tslime
+Bundle 'benmills/vimux'
+Bundle 'skalnik/vim-vroom'
 
 filetype plugin indent on
 
@@ -84,23 +93,26 @@ let g:gitgutter_sign_column_always = 1
 " Open ggrep in a quickfix window
 autocmd QuickFixCmdPost *grep* cwindow
 
+" For tmux-rspec integration
+let g:vroom_use_vimux = 1
+
 " Tweaks
 let mapleader=","
 
 map <leader><leader> <c-^>
-map <leader>r :so $MYVIMRC<cr>
-nnoremap <leader>ev <c-w><c-v><c-l>:e $MYVIMRC<cr>
 
-map <leader>a :Ack 
+map <Leader>a :call VimuxRunCommand('clear && bundle exec rspec')<cr>
 map <leader>b :NERDTreeToggle<cr>
-map <leader>v :ccl<cr>
-map <leader>x :noh<cr>
+nnoremap <leader>ev <c-w><c-v><c-l>:e $MYVIMRC<cr>
+map <leader>f :VroomRunTestFile<cr>
+map <leader>g :Ack
+map <leader>r :so $MYVIMRC<cr>
+map <Leader>s :VroomRunNearestTest<cr>
+map <leader>x :noh \| ccl \| NERDTreeClose<cr>
+map <leader>X :call VimuxRunCommand('exit')<c>
 
 " Start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
-
-" Start interactive EasyAlign with a Vim movement
-nmap <Leader>l <Plug>(EasyAlign)
 
 " Slightly faster paging
 nnoremap <c-e> 5<c-e>
@@ -134,9 +146,6 @@ inoremap jj <esc>
 nnoremap j gj
 nnoremap k gk
 
-" Easier command entry
-nnoremap ; :
-
 " Indent
 vnoremap < <gv
 vnoremap > >gv
@@ -144,16 +153,3 @@ vnoremap > >gv
 " Overtone helpers
 " map <leader>x :Eval<cr>
 " map <leader>q :Eval (stop)<cr>
-
-" Spec helpers
-function! SpecFile()
-  !bundle exec rspec %
-endfunction
-function! SpecFiles()
-  !bundle exec rspec
-endfunction
-nnoremap <leader>s :call SpecFile()<CR>
-nnoremap <leader>S :call SpecFiles()<CR>
-
-let @f='/describeN:s/ do/, :focus do:noh'
-
