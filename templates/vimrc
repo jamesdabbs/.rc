@@ -20,6 +20,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'travitch/hasksyn'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'slim-template/vim-slim'
 
 " Text manipulation
 Bundle 'junegunn/vim-easy-align'
@@ -27,6 +28,7 @@ Bundle 'scrooloose/nerdcommenter'
 
 " Spec running
 Bundle 'skalnik/vim-vroom'
+Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on
 
