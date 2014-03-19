@@ -72,3 +72,6 @@ export EDITOR=vim
 export OPT=3
 export WARN_ERRORS=-Werror
 export SYNC="$HOME/Box Sync"
+
+# Fix stupid Vagrant not knowing how to SSL
+export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
