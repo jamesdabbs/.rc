@@ -31,6 +31,7 @@ alias rr='rake clean && rake'
 function mcd {
   mkdir $1 && cd $1
 }
+alias alert='terminal-notifier -message Ping!'
 alias ttr='touch tmp/restart.txt'
 alias valgruby='valgrind --trace-children=yes'
 alias glocal='git ls-files --others | grep -v -e node_modules -e .bundle -e coverage -e ".o$"'
@@ -49,4 +50,3 @@ function colors-for-tmux {
 # Update helpers
 alias au='sudo apt-get update -y && sudo apt-get upgrade -y'
 alias bu='brew update && brew upgrade'
-
