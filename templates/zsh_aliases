@@ -46,6 +46,7 @@ function colors-for-tmux {
     printf "\x1b[38;5;${i}mcolour${i}\t"
   done
 }
+alias s='bin/spring'
 
 # Update helpers
 alias au='sudo apt-get update -y && sudo apt-get upgrade -y'
