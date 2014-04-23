@@ -45,8 +45,10 @@ source $HOME/.zshrc.local
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$HOME/.cabal/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH
-export BUNDLE_PATH=.bundle
 export PATH=.bundle/bin:$PATH
+
+# I like this in theory, but in practice it breaks things like spring
+# export BUNDLE_PATH=.bundle
 
 setopt hist_ignore_space
 export HISTSIZE=50000
