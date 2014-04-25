@@ -30,12 +30,21 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'skalnik/vim-vroom'
 Bundle 'altercation/vim-colors-solarized'
 
+" CoqIDE
+Bundle 'def-lkb/vimbufsync'
+Bundle 'the-lambda-church/coquille'
+
 filetype plugin indent on
 
 syntax on
 
+
 " Highlight hamlc as haml
 au BufRead,BufNewFile *.hamlc set ft=haml
+
+" UTF-8 everywhere
+set encoding=utf-8
+set fileencoding=utf-8
 
 " Use 7.4 hybrid numbering
 set relativenumber
@@ -111,6 +120,10 @@ map <leader>r :so $MYVIMRC<cr>
 map <Leader>s :VroomRunNearestTest<cr>
 map <leader>S :VroomRunTestFile<cr>
 map <leader>x :noh \| ccl \| NERDTreeClose \| redraw!<cr>
+
+map <leader><up> :CoqUndo<cr>
+map <leader><left> :CoqToCursor<cr>
+map <leader><down> :CoqNext<cr>
 
 " Start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
