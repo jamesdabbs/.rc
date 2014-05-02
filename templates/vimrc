@@ -39,8 +39,9 @@ filetype plugin indent on
 syntax on
 
 
-" Highlight hamlc as haml
+" File type extenstions
 au BufRead,BufNewFile *.hamlc set ft=haml
+au BufRead,BufNewFile *.thor set filetype=ruby
 
 " UTF-8 everywhere
 set encoding=utf-8
