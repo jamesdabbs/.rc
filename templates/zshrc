@@ -77,3 +77,5 @@ export SYNC="$HOME/Box Sync"
 
 # Fix stupid Vagrant not knowing how to SSL
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+
+export TERM=xterm-256color

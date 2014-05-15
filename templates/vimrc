@@ -28,7 +28,6 @@ Bundle 'scrooloose/nerdcommenter'
 
 " Spec running
 Bundle 'skalnik/vim-vroom'
-Bundle 'altercation/vim-colors-solarized'
 
 " CoqIDE
 Bundle 'def-lkb/vimbufsync'
