@@ -1,0 +1,15 @@
+Config {
+    bgColor = "#000000",
+    fgColor = "#C7C7C7",
+    position = TopSize C 100 23,
+    font = "xft:Monaco:size=10:bold:antialias=true",
+    lowerOnStart = True,
+    commands = [
+        Run Cpu ["-L", "3", "-H", "50", "--normal", "#429942", "--high", "#A36666"] 10,
+        Run Memory ["-t", "Mem: <usedratio>%"] 10,
+        Run Date "%a %b %_d %Y %H:%M:%S" "date" 10,
+        Run StdinReader
+    ],
+    sepChar = "%",
+    alignSep = "}{",
+    template = " %StdinReader% }{ %cpu% <fc=#3579A8>|</fc> %memory% <fc=#3579A8>|</fc> <fc=#3579A8>%date%</fc> "
