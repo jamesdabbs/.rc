@@ -75,6 +75,9 @@ export OPT=3
 export WARN_ERRORS=-Werror
 export SYNC="$HOME/Box Sync"
 
+# Turn on Bullet monitoring, even in test
+export BULLET=1
+
 # Fix stupid Vagrant not knowing how to SSL
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 

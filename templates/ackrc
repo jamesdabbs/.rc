@@ -17,6 +17,7 @@
 --ignore-dir=public/assets
 --ignore-dir=.bundle
 --ignore-dir=node_modules
+--ignore-dir=bower_components
 --ignore-dir=cabal-dev
 --ignore-dir=dist
 --ignore-dir=.cabal-sandbox

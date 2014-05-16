@@ -21,6 +21,8 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'travitch/hasksyn'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'slim-template/vim-slim'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'pbrisbin/html-template-syntax'
 
 " Text manipulation
 Bundle 'junegunn/vim-easy-align'
@@ -71,7 +73,7 @@ set wildmenu
 set wildmode=list:longest
 
 " CtrlP .ignore
-set wildignore+=*/cabal-dev/*,*/node_modules/*,*.so,*.o,*.hi
+set wildignore+=*/cabal-dev/*,*/node_modules/*,*/bower_components/*,*.so,*.o,*.hi
 
 " Use 256 color schemes
 set t_Co=256
