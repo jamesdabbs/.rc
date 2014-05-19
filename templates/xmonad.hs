@@ -12,8 +12,6 @@ import qualified Data.Map as M
 
 myLayout = avoidStruts $
            tiled
-           ||| reflectHoriz tiled
-           ||| reflectHoriz pair
            ||| Full
   where
      tiled    = Tall nmaster delta half
@@ -28,7 +26,7 @@ main = do
     status <- spawnPipe "xmobar"
     xmonad $ defaultConfig {
         focusFollowsMouse  = False,
-        borderWidth        = 1,
+        borderWidth        = 2,
         normalBorderColor  = "#666666",
         focusedBorderColor = "#ffffaf",
         -- terminal           = "xfce4-terminal",
