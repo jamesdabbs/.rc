@@ -29,11 +29,11 @@ Bundle 'junegunn/vim-easy-align'
 Bundle 'scrooloose/nerdcommenter'
 
 " Spec running
-Bundle 'skalnik/vim-vroom'
+"Bundle 'skalnik/vim-vroom'
 
 " CoqIDE
-Bundle 'def-lkb/vimbufsync'
-Bundle 'the-lambda-church/coquille'
+"Bundle 'def-lkb/vimbufsync'
+"Bundle 'the-lambda-church/coquille'
 
 filetype plugin indent on
 

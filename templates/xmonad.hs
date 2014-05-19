@@ -40,5 +40,6 @@ main = do
           ((mod1Mask, xK_h), viewScreen 0),
           ((mod1Mask, xK_l), viewScreen 1),
           ((mod1Mask .|. shiftMask, xK_h), sendMessage Shrink),
-          ((mod1Mask .|. shiftMask, xK_l), sendMessage Expand)
+          ((mod1Mask .|. shiftMask, xK_l), sendMessage Expand),
+          ((mod1Mask .|. shiftMask, xK_r), restart "/usr/bin/obtoxmd" True)
         ]
