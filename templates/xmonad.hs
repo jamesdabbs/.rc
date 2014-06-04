@@ -21,7 +21,7 @@ layout = avoidStruts $
      half     = 1/2
      delta    = 2/100
 
-mod  = mod1Mask
+mod  = mod4Mask
 modS = mod .|. shiftMask
 
 gs = defaultGSConfig
@@ -69,4 +69,5 @@ main = do
     , layoutHook         = layout
     , logHook            = logger status
     , startupHook        = startup
+    , modMask            = mod
     } `additionalKeys` shortcuts
