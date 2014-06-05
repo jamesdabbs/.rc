@@ -166,6 +166,9 @@ nnoremap k gk
 vnoremap < <gv
 vnoremap > >gv
 
+" Format
+nmap =j :%!python -m json.tool<cr>
+
 " Overtone helpers
 " map <leader>x :Eval<cr>
 " map <leader>q :Eval (stop)<cr>
