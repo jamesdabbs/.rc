@@ -40,6 +40,9 @@ function bak {
 }
 alias mochall='mocha --recursive test'
 alias jurl='curl -H "Content-type: application/json"'
+function jv {
+  cat "$1" | python -m json.tool | less
+}
 alias fix-vbox='sudo /Library/StartupItems/VirtualBox/VirtualBox restart'
 function colors-for-tmux {
   for i in {0..255} ; do
