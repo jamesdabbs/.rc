@@ -21,14 +21,16 @@ layout = avoidStruts $
      half     = 1/2
      delta    = 2/100
 
-mod  = mod4Mask
+alt  = mod1Mask
+win  = mod4Mask
+mod  = alt
 modS = mod .|. shiftMask
 
 gs = defaultGSConfig
 
 shortcuts = [
-  ((mod, xK_h), viewScreen 0),
-  ((mod, xK_l), viewScreen 1),
+  ((alt .|. win, xK_h), viewScreen 0),
+  ((alt .|. win, xK_l), viewScreen 1),
   ((mod, xK_Tab), goToSelected gs),
   ((modS, xK_h), sendMessage Shrink),
   ((modS, xK_l), sendMessage Expand),
