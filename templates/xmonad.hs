@@ -14,11 +14,9 @@ import qualified XMonad.StackSet as W
 
 layout = avoidStruts $
          tiled
-         ||| pair
          ||| Full
   where
      tiled    = Tall nmaster delta half
-     pair     = Tall 2 delta half
      nmaster  = 1
      half     = 1/2
      delta    = 2/100
