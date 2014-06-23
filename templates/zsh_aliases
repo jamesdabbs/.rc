@@ -25,6 +25,7 @@ alias o3='export OPT=3 && echo "Set OPT=3"'
 
 # General helpers
 alias b='bundle exec'
+alias br='bundle exec rspec'
 alias k='keenser'
 alias r='rake'
 alias rr='rake clean && rake'

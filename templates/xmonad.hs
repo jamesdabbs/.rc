@@ -14,6 +14,7 @@ import qualified XMonad.StackSet as W
 
 layout = avoidStruts $
          tiled
+         ||| Mirror tiled
          ||| Full
   where
      tiled    = Tall nmaster delta half
@@ -70,6 +71,6 @@ main = do
     , handleEventHook    = docksEventHook <+> handleEventHook defaultConfig
     , layoutHook         = layout
     , logHook            = logger status
-    , startupHook        = startup
+    -- , startupHook        = startup
     , modMask            = mod
     } `additionalKeys` shortcuts
