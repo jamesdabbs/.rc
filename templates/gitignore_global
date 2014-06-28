@@ -46,6 +46,7 @@ Thumbs.db
 .bundle
 tags
 
+.env
 .cabal-sandbox
 cabal.sandbox.config
 
