@@ -72,7 +72,6 @@ compctl -K tmux_sessions ta
 
 export EDITOR=vim
 export OPT=3
-export DEBUG=1
 export WARN_ERRORS=-Werror
 export SYNC="$HOME/Box Sync"
 
