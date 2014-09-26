@@ -51,3 +51,6 @@ tags
 cabal.sandbox.config
 
 *.jcd
+
+/config/application.yml
+/spec/cassettes
