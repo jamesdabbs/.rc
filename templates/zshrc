@@ -43,7 +43,7 @@ source $HOME/.zsh_aliases
 source $HOME/.zshrc.local
 
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=$HOME/.cabal/bin:$PATH
+export PATH=.cabal-sandbox/bin:$HOME/.cabal/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH
 export PATH=.bundle/bin:$PATH
 
@@ -79,7 +79,7 @@ export SYNC="$HOME/Box Sync"
 export BULLET=1
 
 # Fix stupid Vagrant not knowing how to SSL
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+#export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 export TERM=xterm-256color
 

@@ -54,3 +54,4 @@ cabal.sandbox.config
 
 /config/application.yml
 /spec/cassettes
+/.vagrant
