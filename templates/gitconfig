@@ -30,3 +30,5 @@
 [init]
   templatedir = ~/.rc/templates/git-hooks
 
+#[url "https://"]
+#	insteadOf = git://

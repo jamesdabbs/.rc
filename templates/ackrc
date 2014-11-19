@@ -21,4 +21,5 @@
 --ignore-dir=cabal-dev
 --ignore-dir=dist
 --ignore-dir=.cabal-sandbox
+--ignore-dir=.env
 --smart-case

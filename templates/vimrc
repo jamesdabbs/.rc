@@ -2,31 +2,37 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " File exploration
-Bundle 'mileszs/ack.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
+Plugin 'mileszs/ack.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
 
 " Git integration
-Bundle 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
 
 " Coloring and syntax highlighting
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'travitch/hasksyn'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'slim-template/vim-slim'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'pbrisbin/html-template-syntax'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'travitch/hasksyn'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'slim-template/vim-slim'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'pbrisbin/html-template-syntax'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'jelera/vim-javascript-syntax'
 
 " Text manipulation
-Bundle 'junegunn/vim-easy-align'
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'mattn/emmet-vim'
+
+" Hinting
+Plugin 'Shutnik/jshint2.vim'
 
 " Spec running
 "Bundle 'skalnik/vim-vroom'
@@ -35,6 +41,7 @@ Bundle 'scrooloose/nerdcommenter'
 "Bundle 'def-lkb/vimbufsync'
 "Bundle 'the-lambda-church/coquille'
 
+call vundle#end()
 filetype plugin indent on
 
 syntax on
