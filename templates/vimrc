@@ -25,6 +25,8 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'pbrisbin/html-template-syntax'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'jelera/vim-javascript-syntax'
+"Plugin 'godlygeek/tabular' " Required for vim-markdown
+"Plugin 'plasticboy/vim-markdown'
 
 " Text manipulation
 Plugin 'junegunn/vim-easy-align'
