@@ -1,0 +1,11 @@
+# These are by-and-large good ideas, but a little too nitpicky and onerous
+Style/SpaceAfterComma:
+  Enabled: false
+Style/StringLiterals:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+
+# I am the anti-lisp
+Style/MethodDefParentheses:
+  EnforcedStyle: require_no_parentheses
