@@ -153,8 +153,8 @@ inoremap <right> <nop>
 inoremap jj <esc>
 
 " Move line-wise on wrapped lines
-"nnoremap j gj
-"nnoremap k gk
+nnoremap j gj
+nnoremap k gk
 
 " Indent
 vnoremap < <gv

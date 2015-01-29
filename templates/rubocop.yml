@@ -6,6 +6,9 @@ Style/StringLiterals:
 Style/Documentation:
   Enabled: false
 
+Metrics/LineLength:
+  Max: 120
+
 # I am the anti-lisp
 Style/MethodDefParentheses:
   EnforcedStyle: require_no_parentheses
