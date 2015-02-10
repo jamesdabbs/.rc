@@ -102,6 +102,9 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+" Fix 'crontab: temp file must be edited in place' on OSX
+autocmd filetype crontab setlocal nobackup nowritebackup
+
 " Save on losing focus
 au FocusLost * :wa
 

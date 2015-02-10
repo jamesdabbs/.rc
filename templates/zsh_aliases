@@ -55,3 +55,5 @@ alias s='bin/spring'
 # Update helpers
 alias au='sudo apt-get update -y && sudo apt-get upgrade -y'
 alias bu='brew update && brew upgrade'
+
+alias cdc='cd $HOME/src/work/course-notes'
