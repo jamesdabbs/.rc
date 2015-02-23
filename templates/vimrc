@@ -10,7 +10,8 @@ Plugin 'gmarik/Vundle.vim'
 " File exploration
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
+"Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-vinegar'
 
 " Git integration
 Plugin 'airblade/vim-gitgutter'
@@ -28,9 +29,14 @@ Plugin 'jelera/vim-javascript-syntax'
 "Plugin 'godlygeek/tabular' " Required for vim-markdown
 "Plugin 'plasticboy/vim-markdown'
 
+" Rails-y things ~ see http://pacuna.io/2015/02/09/vim-on-rails/
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-endwise'
+
 " Text manipulation
 Plugin 'junegunn/vim-easy-align'
-Plugin 'scrooloose/nerdcommenter'
+"Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-commentary'
 Plugin 'mattn/emmet-vim'
 
 " Hinting
@@ -120,9 +126,10 @@ let mapleader=","
 
 map <leader><leader> <c-^>
 
-map <leader>b :NERDTreeToggle<cr>
+"map <leader>b :NERDTreeToggle<cr>
 map <leader>r :so $MYVIMRC<cr>
-map <leader>x :noh \| ccl \| NERDTreeClose \| redraw!<cr>
+" NERDTreeClose ?
+map <leader>x :noh \| ccl \| redraw!<cr>
 
 " map <leader><up> :CoqUndo<cr>
 " map <leader><left> :CoqToCursor<cr>
