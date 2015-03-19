@@ -4,9 +4,11 @@
 
 class PreCommitHandler
 
+  FORBIDDEN = %w( binding.pry ) # :focus, FIXME, whatever
+
   def handle
     # TODO: scope disallowed patterns based on file name (*_spec.rb, *.rb, .etc)
-    %w{ :focus binding.pry }.each do |forbidden|
+    FORBIDDEN.each do |forbidden|
       cmd  = "git diff --cached -G'#{forbidden}'"
       diff = `#{cmd}`
       unless diff.empty?
