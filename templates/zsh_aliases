@@ -26,7 +26,7 @@ alias o3='export OPT=3 && echo "Set OPT=3"'
 # General helpers
 alias b='bundle exec'
 alias br='bundle exec rspec'
-alias k='keenser'
+alias g='git'
 alias r='rake'
 alias rr='rake clean && rake'
 function mcd {
@@ -51,6 +51,9 @@ function colors-for-tmux {
   done
 }
 alias s='bin/spring'
+function y {
+  cat "$1" | pbcopy
+}
 
 # Update helpers
 alias au='sudo apt-get update -y && sudo apt-get upgrade -y'

@@ -173,6 +173,8 @@ vnoremap > >gv
 " Format
 nmap =j :%!python -m json.tool<cr>
 
+let @h='%s/:\([^=,''"]*\) =>/\1:/g'
+
 " Overtone helpers
 " map <leader>x :Eval<cr>
 " map <leader>q :Eval (stop)<cr>
