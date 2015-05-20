@@ -23,4 +23,5 @@
 --ignore-dir=.cabal-sandbox
 --ignore-dir=.env
 --ignore-dir=static/combined
+--ignore-dir=_site
 --smart-case
