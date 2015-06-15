@@ -1,3 +1,6 @@
+" See http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
+"   for some fantastic tips
+"
 " This is standard pathogen and Vim setup
 set nocompatible
 filetype off
@@ -10,8 +13,10 @@ Plugin 'gmarik/Vundle.vim'
 " File exploration
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
-"Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-vinegar'
+
+" General
+Plugin 'terryma/vim-expand-region'
 
 " Git integration
 Plugin 'airblade/vim-gitgutter'
@@ -26,16 +31,14 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'pbrisbin/html-template-syntax'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'jelera/vim-javascript-syntax'
-"Plugin 'godlygeek/tabular' " Required for vim-markdown
-"Plugin 'plasticboy/vim-markdown'
 
 " Rails-y things ~ see http://pacuna.io/2015/02/09/vim-on-rails/
+Plugin 'tpope/vim-rbenv'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 
 " Text manipulation
 Plugin 'junegunn/vim-easy-align'
-"Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-commentary'
 Plugin 'mattn/emmet-vim'
 
@@ -85,7 +88,7 @@ set wildmenu
 set wildmode=list:longest
 
 " CtrlP .ignore
-set wildignore+=*/cabal-dev/*,*/node_modules/*,*/bower_components/*,*.so,*.o,*.hi
+set wildignore+=*/cabal-dev/*,*/node_modules/*,*/bower_components/*,*.so,*.o,*.hi,tmp/*,log/*
 
 " Use 256 color schemes
 set t_Co=256
@@ -121,19 +124,20 @@ let g:gitgutter_sign_column_always = 1
 " Open ggrep in a quickfix window
 autocmd QuickFixCmdPost *grep* cwindow
 
+" Expand visual regions with v
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
 " Tweaks
-let mapleader=","
+let mapleader="\<Space>"
 
-map <leader><leader> <c-^>
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
 
-"map <leader>b :NERDTreeToggle<cr>
+map <leader><leader> V
+
 map <leader>r :so $MYVIMRC<cr>
-" NERDTreeClose ?
 map <leader>x :noh \| ccl \| redraw!<cr>
-
-" map <leader><up> :CoqUndo<cr>
-" map <leader><left> :CoqToCursor<cr>
-" map <leader><down> :CoqNext<cr>
 
 " Start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
@@ -170,11 +174,17 @@ nnoremap k gk
 vnoremap < <gv
 vnoremap > >gv
 
-" Format
+" Format JSON
 nmap =j :%!python -m json.tool<cr>
+" Convert old-style Ruby hashes to new style
+nmap =h :%s/:\([^=,''"]*\) =>/\1:/g<cr>
 
-let @h='%s/:\([^=,''"]*\) =>/\1:/g'
-
-" Overtone helpers
+" Overtone
 " map <leader>x :Eval<cr>
 " map <leader>q :Eval (stop)<cr>
+
+" Coq
+" map <leader><up> :CoqUndo<cr>
+" map <leader><left> :CoqToCursor<cr>
+" map <leader><down> :CoqNext<cr>
+
