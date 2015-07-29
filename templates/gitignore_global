@@ -58,3 +58,4 @@ cabal.sandbox.config
 
 *.hi
 *.pid
+stdout
