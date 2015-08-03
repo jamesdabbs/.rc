@@ -4,8 +4,12 @@ else
   loc="%{$fg_bold[yellow]%}%~%{$reset_color%}"
 fi
 
+function docker_machine_name {
+  [[ -n "$DOCKER_MACHINE_NAME" ]] && echo "%{$fg_bold[grey]%}($DOCKER_MACHINE_NAME) "
+}
+
 # Other symbols I might want to use: ∴ ⊗ ⊩
-PROMPT=" ${loc} %{$fg[green]%}%(?..%{$fg_bold[red]%})⊩%{$reset_color%} "
+PROMPT=' $(docker_machine_name)${loc} %{$fg[green]%}%(?..%{$fg_bold[red]%})⊩%{$reset_color%} '
 
 
 # Right prompt w/ Git info - borrowed heavily from `gozilla` theme

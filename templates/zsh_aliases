@@ -59,4 +59,8 @@ function y {
 alias au='sudo apt-get update -y && sudo apt-get upgrade -y'
 alias bu='brew update && brew upgrade'
 
-alias cdc='cd $HOME/src/work/course-notes'
+alias d='docker'
+alias dc='docker-compose'
+alias dm='docker-machine'
+alias ddev='eval "$(docker-machine env dev)"'
+alias dprod='eval "$(docker-machine env sarah)"'
