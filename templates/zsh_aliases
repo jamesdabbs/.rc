@@ -64,3 +64,5 @@ alias dc='docker-compose'
 alias dm='docker-machine'
 alias ddev='eval "$(docker-machine env dev)"'
 alias dprod='eval "$(docker-machine env sarah)"'
+
+alias space='/usr/local/Cellar/emacs-mac/emacs-24.5-z-mac-5.8/Emacs.app/Contents/MacOS/Emacs.sh'
