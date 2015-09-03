@@ -59,3 +59,7 @@ cabal.sandbox.config
 *.hi
 *.pid
 stdout
+
+.stack-work
+dist
+*.tix

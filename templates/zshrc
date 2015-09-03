@@ -42,7 +42,7 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh_aliases
 source $HOME/.zshrc.local
 
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=.cabal-sandbox/bin:$HOME/.cabal/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH
 export PATH=.bundle/bin:$PATH
